@@ -22,24 +22,6 @@
 
 \begin{document}
 
-%\maketitle
-
-%\begin{frame}
-
-
-%\begin{figure}
-%  \centering
-%  \includegraphics[angle=90,width=.3\textwidth]{IMG_6589.JPG}
-%\end{figure}
-
-%\begin{center}
-%\Large{Anwendung von freien Geodaten auf mobilen Navigationsgeräten\\}
-%\end{center}
-
-%\begin{center}
-%{\emph{Freie Karten, Routen und POIs auf herkömmlichen Navigationsgeräten verwenden}}
-%\end{center}
-%\end{frame}
 
 \begin{frame}{Agenda}
   \begin{itemize}
@@ -72,11 +54,11 @@
 
 Das OSM-Datenmodell besteht aus den folgenden Elementen:
 \begin{itemize}
-  \item \includegraphics[height=0.8em]{node}\hspace{0.2em} Punkt bzw. Knoten (englisch: node) 
-  \item \includegraphics[height=0.8em]{way} \hspace{0.2em} \includegraphics[height=0.8em]{closed_way}\hspace{0.2em} Linie (englisch: way)
-  \item \includegraphics[height=0.8em]{area} \hspace{0.2em} Fläche (english: area) 
-  \item \includegraphics[height=0.8em]{relation} \hspace{0.2em} Relation (english: relation) 
-  \item \includegraphics[height=0.8em]{tag} \hspace{0.2em}Attribut (english: tag) 
+  \item \includegraphics[height=0.8em]{node}\hspace{0.2em} Punkt bzw. Knoten (Englisch: node) 
+  \item \includegraphics[height=0.8em]{way} \hspace{0.2em} \includegraphics[height=0.8em]{closed_way}\hspace{0.2em} Linie (Englisch: way)
+  \item \includegraphics[height=0.8em]{area} \hspace{0.2em} Fläche (English: area) 
+  \item \includegraphics[height=0.8em]{relation} \hspace{0.2em} Relation (English: relation) 
+  \item \includegraphics[height=0.8em]{tag} \hspace{0.2em} Attribut (English: tag) 
 
 \end{itemize}
 
@@ -87,7 +69,7 @@ Quelle: \url{https://wiki.openstreetmap.org/wiki/DE:Elemente}
 \begin{frame}[fragile]{Punkt}
 
 \begin{itemize}
-  \item auch Knoten (englisch: node)
+  \item auch Knoten (Englisch: node)
   \item Georeferenzierter Punkt mit Längen- und Breitengrad
   \item kann Eigenschaften (Attribute) haben
   \item kann Teil eines Weges (einer Linie) sein
@@ -100,7 +82,7 @@ Quelle: \url{https://wiki.openstreetmap.org/wiki/DE:Node}
 
 \begin{frame}[fragile]{Linie}
 \begin{itemize}
-  \item auch Weg (englisch: way)
+  \item auch Weg (Englisch: way)
   \item Sequenz von 2 - 2000 Punkten
   \item kann Punkte auch mehrfach enthalten
   \item kann dadurch offenen oder geschlossenen Linienzug darstellen
@@ -140,12 +122,96 @@ Quelle: \url{https://wiki.openstreetmap.org/wiki/DE:Area}
 Quelle: \url{https://wiki.openstreetmap.org/wiki/DE:Relationen}
 \end{frame}
 
+\begin{frame}{Attribut}
+\begin{itemize}
+  \item auch Eigenschaft (Englisch: tag)
+  \item besteht aus Schlüssel und Wert
+  \item Der Schlüssel bestimmt die Art der Eigenschaft
+  \item Der Wert beschreibt die Eigenschaft
+  \item Schlüssel / Werte sind Konvention der einzelnen Communities
+  \item Je zentraler ein Gebiet, desto genormter
+\end{itemize}
+Quelle: \url{https://wiki.openstreetmap.org/wiki/DE:Attribut}
+\end{frame}
+
+\begin{frame}{Überblick über das Wiki}
+\begin{itemize}
+  \item Ein passendes Attribut finden:
+  \begin{itemize}
+    \item \href{https://wiki.openstreetmap.org/wiki/DE:Map_Features}{DE:Map Features}
+    \item \href{https://wiki.openstreetmap.org/wiki/DE:How_to_map_a}{DE:How to map a}
+  \end{itemize}
+  \item Ein Event eintragen, damit es auf der Hauptseite sichtbar wird: \href{https://wiki.openstreetmap.org/wiki/Template:Calendar}{Template:Calendar}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Eingabe von Adressen}
+\begin{itemize}
+  \item Adress-Attribute sind im Namensraum \texttt{addr:} organisiert
+  \item Tagging-Schema wird auch als Karlsruhe Schema bezeichnet
+  \item Adresse besteht aus
+  \begin{itemize}
+    \item \texttt{addr:housenumber} (in UK alternativ \texttt{addr:housename}
+    \item \texttt{addr:street} oder \texttt{addr:place}
+    \item \texttt{addr:postcode}
+    \item \texttt{addr:city} oder \texttt{addr:place}
+    \item \texttt{addr:country}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Eingabe von Adressen Teil 2}
+\begin{itemize}
+  \item Geeignete Elemente für Adress-Attribute:
+  \begin{itemize}
+    \item Umrissfläche eines Gebäudes (\texttt{building=*})
+    \item Punkt, der Eingang in das Gebäude kennzeichnet (\texttt{entrance=yes})
+    \item Einzelpunkt, falls Gebäudeumriss nicht erruierbar
+    \item POIs
+    \begin{itemize}
+      \item \texttt{amenity=*} Einrichtung
+      \item \texttt{shop=*} Geschäfte
+      \item \texttt{tourism=*} Elemente, die für Tourismus genutzt werden
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Eingabe von Adressen Teil 3}
+\begin{itemize}
+  \item Nützliche Plug-Ins:
+  \begin{itemize}
+    \item HouseNumberTaggingTool: Bequemes Erfassen einer Straße
+    \item austriaaddresshelper: Automatische Abfrage der Daten vom Bundesamt für Eich- und Vermessungswesen
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Arbeiten mit unterschiedlichen Datenformaten}
+\begin{itemize}
+  \item Öffnen selbst erfasster Daten
+  \begin{itemize}
+    \item .gpx (GPS-Tracks)
+    \item .jpg (georeferenzierte Fotos)
+  \end{itemize}
+  \item Verwendung von Open Government Data
+  \begin{itemize}
+    \item In Österreich auf \url{https://www.data.gv.at/}  
+    \item Meistens Shapefiles
+    \item opendata-Plugin erforderlich
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
 \begin{frame}
 Folien zum JOSM--Workshop auf den
 \href{http://http://linuxtage.at/}{Grazer Linuxtagen} am 27. 4. 2018.
 \vspace{1cm}
 
 Folien unter \includegraphics[width=1cm]{cc-by-sa.png}.
+Icons der Datenelemente erstellt von \href{https://wiki.openstreetmap.org/wiki/User:Ck3d}{Ck3d}
 \vspace{1cm}
 
 Erstellt mittels \LaTeX Beamer, Source auf \url{https://github.com/StefanTiran/josm_ws_glt18/}.
