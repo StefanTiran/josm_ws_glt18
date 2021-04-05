@@ -11,7 +11,7 @@
 
 \title{JOSM Workshop}
 \author{Stefan Tiran  osm@stefantiran.at}
-\date{April 27th, 2018}
+\date{April 9th, 2021}
 
 \usetheme{Antibes}
 
@@ -25,13 +25,12 @@
 
 \begin{frame}{Agenda}
   \begin{itemize}
-    \item Erste Demo zum Kennenlernen
     \item Vorstellung des Vortragenden
     \item Kurze Einführung in das OSM--Datenmodell
     \item Kurzer Überblick über das OSM--Wiki
-    \item Eingabe von Adressen
-    \item Arbeiten mit Layern
-    \item Arbeiten mit unterschiedlichen Datenformaten
+    \item Craftmapping
+    \item Umgang mit bestehenden Relationen
+    \item Datenquellen für Österreich
 
   \end{itemize}
 \end{frame}
@@ -145,40 +144,18 @@ Quelle: \url{https://wiki.openstreetmap.org/wiki/DE:Attribut}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Eingabe von Adressen}
+\begin{frame}{Pacman--Mentalität vs. Craftmapping}
 \begin{itemize}
-  \item Adress-Attribute sind im Namensraum \texttt{addr:} organisiert
-  \item Tagging-Schema wird auch als Karlsruhe Schema bezeichnet
-  \item Adresse besteht aus
-  \begin{itemize}
-    \item \texttt{addr:housenumber} (in UK alternativ \texttt{addr:housename}
-    \item \texttt{addr:street} oder \texttt{addr:place}
-    \item \texttt{addr:postcode}
-    \item \texttt{addr:city} oder \texttt{addr:place}
-    \item \texttt{addr:country}
-  \end{itemize}
+  \item Antipattern: OSM als Computerspiel wie Pacman betrachten
+  \item Unterschiedliche Ziele
+  \item Ziel OSM: Datenqualität verbessern
+  \item Ziel Pacman: Alle Pillen fressen
+  \item Daher: Nicht zu sehr auf Validationstools schauen
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Eingabe von Adressen Teil 2}
-\begin{itemize}
-  \item Geeignete Elemente für Adress-Attribute:
-  \begin{itemize}
-    \item Umrissfläche eines Gebäudes (\texttt{building=*})
-    \item Punkt, der Eingang in das Gebäude kennzeichnet (\texttt{entrance=yes})
-    \item Einzelpunkt, falls Gebäudeumriss nicht erruierbar
-    \item POIs
-    \begin{itemize}
-      \item \texttt{amenity=*} Einrichtung
-      \item \texttt{shop=*} Geschäfte
-      \item \texttt{tourism=*} Elemente, die für Tourismus genutzt werden
-    \end{itemize}
-  \end{itemize}
-\end{itemize}
 
-\end{frame}
-
-\begin{frame}{Eingabe von Adressen Teil 3}
+\begin{frame}{Die wichtigsten Datenquellen für Österreich Teil 1}
 \begin{itemize}
   \item Nützliche Plug-Ins:
   \begin{itemize}
@@ -189,7 +166,7 @@ Quelle: \url{https://wiki.openstreetmap.org/wiki/DE:Attribut}
 
 \end{frame}
 
-\begin{frame}{Arbeiten mit unterschiedlichen Datenformaten}
+\begin{frame}{Die wichtigsten Datenquellen für Österreich Teil 2}
 \begin{itemize}
   \item Öffnen selbst erfasster Daten
   \begin{itemize}
@@ -207,14 +184,14 @@ Quelle: \url{https://wiki.openstreetmap.org/wiki/DE:Attribut}
 
 \begin{frame}
 Folien zum JOSM--Workshop auf den
-\href{http://http://linuxtage.at/}{Grazer Linuxtagen} am 27. 4. 2018.
+\href{http://http://linuxtage.at/}{Grazer Linuxtagen} am 9. 4. 2021.
 \vspace{1cm}
 
 Folien unter \includegraphics[width=1cm]{cc-by-sa.png}.
 Icons der Datenelemente erstellt von \href{https://wiki.openstreetmap.org/wiki/User:Ck3d}{Ck3d}
 \vspace{1cm}
 
-Erstellt mittels \LaTeX Beamer, Source auf \url{https://github.com/StefanTiran/josm_ws_glt18/}.
+Erstellt mittels \LaTeX Beamer. 
 \vspace{1cm}
 
 \href{mailto:osm@stefantiran.at}{Stefan Tiran}
